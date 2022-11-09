@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+
+/* Login.html */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    background: linear-gradient(180deg, #F4F2CD, #F4C95D);
+    height: 100vh; /*a guardar*/
+    overflow: hidden;
+    
+}
+
+
+.caixa{
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #2e2e2e;
+    border-radius: 10px;
+    z-index: 0;
+    margin-top: 40px;
+}
+
+.caixa h1{
+    color: white;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid silver;
+    z-index: 0;
+}
+
+.caixa form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.txt_error{
+    color: #aaadaa;
+    font-size: 13px;
+    padding: 5px 0px 0px 45px;
+    margin: 0 0 -10px 0;
+    font-style: italic;
+
+}
+/* CSS inputs */
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #aaadaa;
+    margin: 30px 0;
+}
+
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+
+}
+
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width:  0%;
+    height: 2px;
+    background: #e0a464;
+    transition: .3s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #e0a464;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+    width: 100%;
+    color: #e0a464;
+}
+
+/* CSS  parte de baixo */
+.pass{
+    margin: -5px 0 20px 5px;
+    cursor: pointer;
+}
+
+.pass a{
+    color: #adadad;
+    text-decoration: none;
+}
+
+.pass a:hover{
+    text-decoration: underline;
+    color: #e0a464;
+}
+
+
+/* CSS botão */
+
+.submit_login{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #e0a464;
+    border-radius: 25px;
+    border-color: #2e2e2e;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
+
+
+} 
+
+.submit_login:hover{
+    border-color: #e0a464;
+    font-size: 120%;
+    transition: .3s;
+}
+
+
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #cecece;
+}
+
+.signup_link a{
+    color: #e0a464;
+    text-decoration: none;
+}
+
+.signup_link a:hover{
+    text-decoration: underline;
+
+
+}
+
+/* sucesso.php */
+
+.sucesso{
+        margin: -5px 0 20px 5px;
+        color: #e0a464;
+        text-align: center;
+        font-size: 20px;
+    
+}
+/* reporpasse.php */
+.password_txt{
+    margin: 20px 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #cecece;
+}
+
+.password_txt2{
+    text-align: center;
+    font-size: 14px;
+    color: #adadad;
+}

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+Html, body{
+    height: 100%;
+}
+
+body{
+    position: relative;
+    background-color: #0093e9;
+    background-image:linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+
+.procurar-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem
+}
+
+input {
+    font-size: 1rem;
+}
+
+.alimentos-btn {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+    text-align-last: center;
+}
+
+.btn{
+    border: px solid black;
+    background-color: #ccc;
+    padding: .5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn :hover{
+    background: aqua;
+}
+
+.btn > .button{
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.hide {
+    display:none;
+}
+

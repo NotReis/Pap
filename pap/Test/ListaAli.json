@@ -1,0 +1,36 @@
+
+[
+	{"id": 1, "name": "Banana" },
+	{   
+        "id": 2,
+		"name": "Entroncamento"
+	},
+	{
+        "id": 3,
+		"name": "Esparguete"
+	},
+	{
+        "id": 4,
+		"name": "Espinafres"
+	},
+	{
+        "id": 5,
+		"name": "Febra de Porco"
+	},
+	{
+        "id": 6,
+		"name": "MaxMonsanto"
+	},
+	{
+        "id": 7,
+		"name": "Ovo"
+	},
+	{
+        "id": 8,
+		"name": "Presunto"
+	},
+	{
+        "id": 9,
+		"name": "nabos"
+	}
+]
