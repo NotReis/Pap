@@ -78,7 +78,7 @@
 
             <?php foreach($ingredientes as $list) { ?>
                 <!-- verifica se algum campo da $list está no $arr-->
-                      
+                 <!-- puto roger-->    
                         <div class="item">
                             <div class="checkbox-rect2">
                                 <!-- "Id" e "For" atribuir a checkbox á label / "value" para mostrar as boxes selecionadas-->
