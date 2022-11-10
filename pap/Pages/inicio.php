@@ -12,6 +12,8 @@
         <title>Login</title>
 
         <link rel="stylesheet" href="../Pages/css/inicio.css">
+        <script src="../Components/js/navbar.js"></script>
+        <script src="../Pages/js/inicio.js"></script>
     </head>
     <body>
 
@@ -28,7 +30,9 @@
     <div class="content">
         <div class="textbox">
             <h2>Make it! <br> <span> Drink </span>it!</h2>
-            <p>"o JORGE VENEZUELA É FUINHA."
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             </p>
             <a href="#">Fazer uma receita</a>  
         </div>
@@ -69,14 +73,19 @@
     ?>
 
      <form method="POST">
-
+     
     <div class="grid-container">
-        <div class="caixa">
 
+        <div class="limpar">
+        <input type="submit" onclick="uncheck()" class="limpar_btn" id="limparId" value="Limpar" name="Limpar"/> 
+        </div>
+
+
+        <div class="caixa">
 
             <?php foreach($ingredientes as $list) { ?>
                 <!-- verifica se algum campo da $list está no $arr-->
-                 <!-- puto roger-->    
+  
                         <div class="item">
                             <div class="checkbox-rect2">
                                 <!-- "Id" e "For" atribuir a checkbox á label / "value" para mostrar as boxes selecionadas-->
@@ -102,7 +111,7 @@
     </div>
     
     <input type="submit" value="submit" name="submit"/> 
-    <input type="submit" value="limpar" name="limpar"/> 
+
     </form>
     </body>
 </html>

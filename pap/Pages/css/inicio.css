@@ -81,7 +81,7 @@ section{
 }
 
 .content .textbox a:hover{
-  background: #545643;
+  background: #695c3c;
   color: white;
   transition: 0.3s;
 
@@ -193,7 +193,6 @@ transform: rotate(-10deg) translateY(-20px);
 .grid-container {
     
     grid-template-columns: repeat(auto-fit, 300px);
-    /* minmax(300px, 1fr)*/
     grid-gap: 20px;
     padding: 20px;
     padding-top: 35px;
@@ -201,6 +200,38 @@ transform: rotate(-10deg) translateY(-20px);
     justify-content: center;
     align-items: start;
   }
+
+  /* limpar btn */
+
+
+.limpar{
+  padding-bottom: 10px ;
+  text-align: right;
+}
+
+.limpar_btn{
+  display: inline-block;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #89A260;
+  color: white;
+  border-radius: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: large;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: .3s;
+
+}
+
+
+.limpar_btn:hover{
+  background: #695c3c;
+  transition: .3s;
+}
 
 .item {
     margin-bottom: 1em;

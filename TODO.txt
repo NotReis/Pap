@@ -16,3 +16,12 @@ cores
 laranja - #e0a464;
 beje - #F4F2CD;
 preto
+
+
+GIT HUB
+
+git add . (copiar a pasta)
+git commit -m "comentario" (adicionar comentário)
+git push origin 0.0.1 (adicionar as pastas á versão)
+
+
