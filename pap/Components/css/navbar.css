@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 
@@ -26,8 +27,16 @@ header{
 }
 
 .logo{
-    display: flex;
-    align-items: center;
+    display:block;
+
+}
+
+.logo-img{
+ height: 70px;
+ weight: 70px;
+ margin: -13px;
+ padding-left: 5px;
+    
 }
 
 .logo h1{
@@ -62,6 +71,7 @@ header{
     transition: .3s;
 }
 .login-btn{
+    padding-top: 2px;
     list-style-type: none;
     position: relative;
     display: inline-block;

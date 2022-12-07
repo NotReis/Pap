@@ -25,3 +25,9 @@ git commit -m "comentario" (adicionar comentário)
 git push origin 0.0.1 (adicionar as pastas á versão)
 
 
+select grupo, id from  grupo_ing
+(fazerum foreach)
+
+select ingrediente from ingredientes where id grupo = $grupos['id']
+
+

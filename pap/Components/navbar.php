@@ -14,8 +14,6 @@
 
 ?>
     
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,8 +29,8 @@
     <header>
             <nav class="nav-bar"> 
                 <div class="logo">
-                    <h1>Logo</h1>
-                    <!--<a href="#" class="nav-link">Inicio</a>-->
+                    
+                <img src="../Components/img/daf.png" class="logo-img" alt="">
 
                 </div>
                 

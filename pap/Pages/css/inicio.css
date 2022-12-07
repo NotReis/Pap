@@ -11,9 +11,21 @@
 body{
   background:#F4C95D;
   height: 100vh; /*a guardar*/
+  -ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
 }
 
-section{
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+.big_circle {
+
+}
+
+
+.section_int{
   position: relative;
   width: 100%;
   min-height: 70vh; 
@@ -233,6 +245,10 @@ transform: rotate(-10deg) translateY(-20px);
   transition: .3s;
 }
 
+.nome-grupo{
+  
+}
+
 .item {
     margin-bottom: 1em;
     display: inline-block;
@@ -246,7 +262,7 @@ transform: rotate(-10deg) translateY(-20px);
     border-radius: 10px;
     padding: 1em;
     padding-top: 1.5em ;
-    
+    margin-bottom: 20px;
 }
 
 .checkbox-rect2 input[type="checkbox"] {
@@ -299,3 +315,34 @@ transform: rotate(-10deg) translateY(-20px);
     background: #e0a464;
     box-shadow: 2px 1px 0 #e0a464;
   }
+
+   /* submit btn */
+   .submit{
+    padding-top: 10px ;
+    text-align: left;
+  }
+  
+  .submit_btn{
+    display: inline-block;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #89A260;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: large;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+  
+  }
+  
+  
+  .submit_btn:hover{
+    background: #695c3c;
+    transition: .3s;
+  }
+  

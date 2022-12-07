@@ -17,7 +17,7 @@
     </head>
     <body>
 
-    <section>
+    <section class="section_int">
         <div class="big_circle"></div>
         <div class="circle circle1"></div>
         <div class="circle circle2"></div>
@@ -34,7 +34,7 @@
                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             </p>
-            <a href="#">Fazer uma receita</a>  
+            <a href="#submit">Fazer uma receita</a>  
         </div>
 
         <!-- Copo -->
@@ -53,66 +53,111 @@
     </svg>
     </div>
 
+        <!-- Checkbox -->
     </section>
-    
-     <!-- Checkbox -->
 
-    <?php  
-        $ingredientes = array('Ingrediente1', 'Ingrediente2', 'Ingrediente3', 'Ingrediente4', 'Ingrediente5');
-        $arr = [];
+    <section class="section_lista">
+
+        
+        <?php
+            include("../Login/conexaologin.php"); 
+            
+            $query = "SELECT * FROM ingredientes"; 
+            $query2 = "SELECT * FROM grupo_ing"; 
+
+            $result = $mysqli->query($query); 
+            $result2 = $mysqli->query($query2);
+            
+            $quantidade_grupos = $result2->fetch_all(); 
+
+            $linha = $result->fetch_array(); 
+
+            $arr = [];
+
+            if(isset($_POST['submit'])){
+            $arr = $_POST['ing'];
+
+            //echo $arr;
+            echo implode(", ", $arr);
+            }
+
+        ?>
+
+        <form method="POST">
+        
+        <div class="grid-container">
+
+            <div class="limpar">
+            <input type="submit" onclick="uncheck()" class="limpar_btn" id="limparId" value="Limpar" name="Limpar"/> 
+            </div>
+
+                <?php
+                
+
+                // print_r($quantidade_grupos);
 
 
+                // O primeiro indice indica a linha, o segundo indica o campo
+                // [linha][grupo]
+                // print $quantidade_grupos[1][1];    
+                for($i = 0; $i<count($quantidade_grupos); $i++){
+                    
 
-        if(isset($_POST['submit'])){
-           $arr = $_POST['ing'];
+                    $id_grupo = $quantidade_grupos[$i][0];
+                    $nome_grupo = $quantidade_grupos[$i][1];
+                    
+                    echo "<h1 class='nome-grupo'>$nome_grupo</h1>";
+                    // print_r($quantidade_grupos);
 
-           //echo $arr;
-           echo implode(", ", $arr);
-        }
+                    echo "<div class='caixa'>"; 
+                    
+                    while($list = $result ->fetch_array()) { 
 
-    ?>
+                        $id_grupo_ingredientes =  $list["idgrupo"]; 
+                        $ingrediente = $list["ingrediente"]."\n";   
 
-     <form method="POST">
-     
-    <div class="grid-container">
+                        if($id_grupo_ingredientes == $id_grupo){?>
+                             
 
-        <div class="limpar">
-        <input type="submit" onclick="uncheck()" class="limpar_btn" id="limparId" value="Limpar" name="Limpar"/> 
-        </div>
+                            <div class="item">
+                                <div class="checkbox-rect2">
+                                    <!-- "Id" e "For" atribuir a checkbox á label / "value" para mostrar as boxes selecionadas-->
+                                    <!-- check= "checked"-->
+                                    <?php if(in_array($list, $arr)){
 
+                                    ?> <input type="checkbox" checked id="<?php echo $ingrediente?>" value="<?php echo $ingrediente?>" name="ing[]"> <!-- [] para contar o array-->
+                                    <label for="<?php echo $ingrediente?>"> <?php echo $ingrediente?> </label>
 
-        <div class="caixa">
+                                <?php } else { ?>
 
-            <?php foreach($ingredientes as $list) { ?>
-                <!-- verifica se algum campo da $list está no $arr-->
-  
-                        <div class="item">
-                            <div class="checkbox-rect2">
-                                <!-- "Id" e "For" atribuir a checkbox á label / "value" para mostrar as boxes selecionadas-->
-                                <!-- check= "checked"-->
-                                <?php if(in_array($list, $arr)){
+                                    <input type="checkbox"  id="<?php echo $ingrediente?>" value="<?php echo $ingrediente?>" name="ing[]"> <!-- [] para contar o array-->
+                                    <label for="<?php echo $ingrediente?>"> <?php echo $ingrediente?> </label>
 
-                                 ?> <input type="checkbox" checked id="<?php echo $list?>" value="<?php echo $list?>" name="ing[]"> <!-- [] para contar o array-->
-                                  <label for="<?php echo $list?>"> <?php echo $list?> </label>
-
-                               <?php } else { ?>
-
-                                <input type="checkbox"  id="<?php echo $list?>" value="<?php echo $list?>" name="ing[]"> <!-- [] para contar o array-->
-                                <label for="<?php echo $list?>"> <?php echo $list?> </label>
-
-                                <?php } ?>
+                                    <?php } ?>
+                                </div>
                             </div>
-                        </div>
-                        
+                       <?php }
+                     }
 
-            <?php } ?>
+                     echo "</div>";
+
+
+                }
+                // Precorre o primeiro query
+
+              ?>
+
+
+            <div class="submit">
+            <input type="submit" value="Submit" name="submit" class="submit_btn"/> 
+            </div>
 
         </div>
-    </div>
-    
-    <input type="submit" value="submit" name="submit"/> 
-
-    </form>
+        </form>
+        
+        <section class="puxa"></section>
+        
+    </section>
     </body>
 </html>
 
